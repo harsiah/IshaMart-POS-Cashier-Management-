@@ -1,0 +1,706 @@
+/* =========================
+   PORTAL PAGE
+========================= */
+
+.portal-page {
+  min-height: 100vh;
+
+  padding: 0 5vw 34px;
+
+  background: radial-gradient(
+    circle at 50% 12%,
+    #ffffff 0,
+    #f5f8f2 48%,
+    #edf4ed 100%
+  );
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.portal-header {
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 0 calc(50% - 50vw);
+
+  padding: 0 5vw;
+
+  background: var(--header-green);
+}
+
+.portal-brand,
+.portal-profile,
+.portal-profile div,
+.portal-benefits div,
+.portal-benefits span {
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.portal-brand {
+  gap: 10px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.portal-brand img {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.portal-profile {
+  gap: 11px;
+
+  color: var(--header-green-light);
+
+  font-size: 13px;
+}
+
+.portal-profile div {
+  align-items: flex-start;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.portal-profile strong {
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.portal-profile small {
+  color: #b9cec2;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+.notification {
+  font-size: 21px;
+
+  margin-right: 12px;
+
+  color: var(--accent-lime);
+}
+
+
+/* =========================
+   AVATAR
+========================= */
+
+.avatar {
+  display: grid;
+  place-items: center;
+
+  width: 31px;
+  height: 31px;
+
+  border-radius: 50%;
+
+  background: var(--accent-lime);
+
+  color: var(--header-green);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   PROFILE ARROW
+========================= */
+
+.profile-arrow {
+  margin-left: 8px;
+
+  font-size: 18px;
+
+  color: var(--header-green-light);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.portal-hero {
+  max-width: 1250px;
+  min-height: 155px;
+
+  margin: auto;
+
+  padding: 34px 10px 24px;
+
+  display: flex;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+
+  color: #4f8b73;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.portal-hero h1 {
+  margin: 0;
+
+  color: var(--green-dark);
+
+  font-size: clamp(30px, 4vw, 43px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+.portal-hero h1 span {
+  color: var(--green-main);
+}
+
+.hero-copy {
+  margin: 12px 0 0;
+
+  color: var(--text-light);
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================
+   PORTAL GRID
+========================= */
+
+.portal-grid {
+  max-width: 1250px;
+
+  margin: 0 auto 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================
+   PORTAL CARD
+========================= */
+
+.portal-card {
+  overflow: hidden;
+
+  min-width: 0;
+
+  border: 1px solid rgba(39, 99, 75, 0.12);
+
+  border-radius: 15px;
+
+  background: var(--white);
+
+  box-shadow:
+    0 8px 22px rgba(30, 76, 57, 0.09);
+}
+
+
+/* =========================
+   CARD ILLUSTRATION
+========================= */
+
+.card-illustration {
+  position: relative;
+
+  height: 115px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    140deg,
+    #d9e9d8,
+    #f1f7ef
+  );
+}
+
+.portal-image {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* POS */
+
+.pos .card-illustration {
+  background: linear-gradient(
+    140deg,
+    #cce8d9,
+    #eff8f2
+  );
+}
+
+
+/* E-Commerce */
+
+.ecommerce .card-illustration {
+  background: linear-gradient(
+    140deg,
+    #d9e8dc,
+    #f3f8f1
+  );
+}
+
+
+/* =========================
+   ILLUSTRATION SCREEN
+========================= */
+
+.illustration-screen {
+  position: absolute;
+
+  left: 35%;
+  top: 23px;
+
+  width: 115px;
+  height: 65px;
+
+  padding: 8px;
+
+  border: 5px solid #5b9178;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  transform:
+    perspective(150px)
+    rotateY(-14deg)
+    rotateX(3deg);
+
+  box-shadow:
+    0 6px 0 #c3d9c8;
+}
+
+.pos .illustration-screen {
+  border-color: #398568;
+}
+
+.ecommerce .illustration-screen {
+  border-color: #4d8b70;
+}
+
+.illustration-screen span {
+  color: var(--green-main);
+
+  font-size: 21px;
+}
+
+.illustration-screen i {
+  display: inline-block;
+
+  width: 17px;
+  height: 4px;
+
+  margin: 4px 3px 0 0;
+
+  border-radius: 3px;
+
+  background: #c6d9cc;
+}
+
+
+/* =========================
+   PLANT
+========================= */
+
+.illustration-plant {
+  position: absolute;
+
+  right: 12%;
+  bottom: 8px;
+
+  width: 28px;
+  height: 38px;
+
+  border-radius: 70% 15% 70% 15%;
+
+  background: #70a987;
+
+  transform: rotate(-28deg);
+}
+
+.illustration-plant:after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -7px;
+  left: 8px;
+
+  width: 15px;
+  height: 10px;
+
+  border-radius: 0 0 8px 8px;
+
+  background: #c59672;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+  position: relative;
+
+  z-index: 3;
+
+  padding: 12px 17px 17px;
+}
+
+
+/* =========================
+   PORTAL ICON
+========================= */
+
+.portal-icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  margin-top: -32px;
+
+  position: relative;
+
+  z-index: 4;
+
+  border-radius: 10px;
+
+  background: var(--green);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 4px 8px rgba(39, 99, 75, 0.25);
+}
+
+
+/* POS */
+
+.pos .portal-icon {
+  background: #238568;
+}
+
+
+/* E-Commerce */
+
+.ecommerce .portal-icon {
+  background: #31795d;
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.card-content h2 {
+  margin: 10px 0 6px;
+
+  color: var(--green-dark);
+
+  font-size: 21px;
+
+  line-height: 1.05;
+}
+
+.card-content h2 span {
+  color: var(--green-main);
+}
+
+.pos h2 span {
+  color: #238568;
+}
+
+.ecommerce h2 span {
+  color: #31795d;
+}
+
+
+/* =========================
+   CARD LIST
+========================= */
+
+.card-content ul {
+  padding: 0;
+
+  margin: 0 0 13px;
+
+  list-style: none;
+
+  color: var(--text);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.card-content li:before {
+  content: "▣";
+
+  margin-right: 8px;
+
+  color: var(--green-main);
+}
+
+.pos li:before {
+  color: #238568;
+}
+
+.ecommerce li:before {
+  color: #31795d;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.card-content button {
+  width: 100%;
+
+  padding: 9px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: var(--green);
+
+  color: #ffffff;
+
+  font: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.card-content button:hover {
+  background: var(--green-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* POS */
+
+.pos button {
+  background: #238568;
+}
+
+.pos button:hover {
+  background: #1b604d;
+}
+
+
+/* E-Commerce */
+
+.ecommerce button {
+  background: #31795d;
+}
+
+.ecommerce button:hover {
+  background: #22533f;
+}
+
+.card-content button span {
+  margin-left: 5px;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.portal-benefits {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 15px 18px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.portal-benefits div {
+  justify-content: center;
+
+  gap: 9px;
+
+  border-right: 1px solid #e0e9e1;
+}
+
+.portal-benefits div:last-child {
+  border: 0;
+}
+
+.portal-benefits b {
+  color: var(--green);
+
+  font-size: 21px;
+}
+
+.portal-benefits span {
+  align-items: flex-start;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.portal-benefits strong {
+  color: var(--green-dark);
+
+  font-size: 10px;
+}
+
+.portal-benefits small {
+  color: #91a197;
+
+  font-size: 8px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .portal-page {
+    padding: 0 18px 25px;
+  }
+
+  .portal-header {
+    width: 100vw;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: 0;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 480px;
+  }
+
+  .portal-benefits {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+  .portal-benefits div:nth-child(2) {
+    border: 0;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+
+  .portal-header {
+    height: 64px;
+  }
+
+  .portal-profile div,
+  .profile-arrow {
+    display: none;
+  }
+
+  .notification {
+    margin-right: 3px;
+  }
+
+  .portal-hero {
+    padding-top: 26px;
+  }
+
+  .portal-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-benefits div {
+    justify-content: flex-start;
+
+    border: 0;
+  }
+}

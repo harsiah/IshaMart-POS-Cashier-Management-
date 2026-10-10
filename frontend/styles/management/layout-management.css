@@ -1,0 +1,506 @@
+/* =========================
+   MANAGEMENT SHELL
+========================= */
+
+.management-shell {
+  --management-ink: #20352d;
+  --management-muted: #77847c;
+
+  display: flex;
+  min-height: 100vh;
+
+  color: var(--management-ink);
+  background: #f3f5f0;
+
+  font-family: var(--font-main);
+}
+
+.management-shell.product-management-theme,
+.management-shell.user-management-theme,
+.management-shell.good-receipt-theme {
+  background: var(--management-page-bg);
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.management-sidebar {
+  position: relative;
+
+  display: flex;
+
+  flex: 0 0 246px;
+
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  padding: 25px 0 22px;
+
+  overflow: hidden;
+
+  color: #f4f8f3;
+
+  background-color: var(--green-dark);
+
+  background-image:
+    linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.035),
+      transparent 42%
+    );
+}
+
+
+/* =========================
+   MANAGEMENT BRAND
+========================= */
+
+.management-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 23px 31px;
+}
+
+.management-brand-mark,
+.management-footer-brand span {
+  color: var(--accent-lime);
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  transform: rotate(-8deg);
+}
+
+.management-brand strong,
+.management-brand small {
+  display: block;
+}
+
+.management-brand strong {
+  font-size: 18px;
+
+  line-height: 1.05;
+}
+
+.management-brand small {
+  margin-top: 5px;
+
+  color: #a9c3b4;
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.management-nav {
+  display: grid;
+
+  gap: 5px;
+
+  padding: 0 12px;
+}
+
+.management-nav-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  min-height: 45px;
+
+  padding: 0 13px;
+
+  border: 0;
+
+  border-radius: 6px;
+
+  color: #c2d2c9;
+
+  background: transparent;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.management-nav-item > svg {
+  flex: 0 0 auto;
+
+  color: #a9c3b4;
+}
+
+.management-nav-label {
+  min-width: 0;
+}
+
+.management-nav-item.active,
+.management-nav-item:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.management-nav-item.active > svg {
+  color: var(--accent-lime);
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.management-sidebar-footer {
+  margin-top: auto;
+
+  padding: 18px 24px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #a9c3b4;
+}
+
+.management-footer-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.management-footer-brand span {
+  font-size: 19px;
+}
+
+.management-sidebar-footer p {
+  margin: 9px 0 0 27px;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.management-main {
+  display: flex;
+
+  flex: 1;
+
+  min-width: 0;
+
+  flex-direction: column;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.management-topbar {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 68px;
+
+  padding: 0 35px;
+
+  border-bottom: 1px solid #e7ebe5;
+
+  background: #ffffff;
+}
+
+
+/* =========================
+   MODULE NAVIGATION
+========================= */
+
+.management-module-nav {
+  display: flex;
+
+  align-items: stretch;
+
+  align-self: stretch;
+
+  gap: clamp(16px, 2.6vw, 36px);
+}
+
+.module-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 2px 0 0;
+
+  border: 0;
+
+  border-bottom: 2px solid transparent;
+
+  color: #68766e;
+
+  background: none;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.module-link > svg {
+  color: #839087;
+}
+
+.module-link.active {
+  border-bottom-color: var(--green);
+
+  color: var(--green-dark);
+}
+
+.module-link.active > svg {
+  color: var(--green);
+}
+
+.module-arrow {
+  color: #99a39c;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   MANAGEMENT ACCOUNT
+========================= */
+
+.management-account {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--management-ink);
+
+  font-size: 11px;
+}
+
+.management-account-avatar {
+  display: grid;
+
+  place-items: center;
+
+  width: 34px;
+
+  height: 34px;
+
+  border: 2px solid #e9f0d4;
+
+  border-radius: 50%;
+
+  color: var(--green-dark);
+
+  background: #e2edbd;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.management-account-info strong,
+.management-account-info small {
+  display: block;
+
+  max-width: 110px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.management-account-info small {
+  margin-top: 2px;
+
+  color: var(--management-muted);
+
+  font-size: 10px;
+}
+
+.management-account-button {
+  width: 26px;
+
+  height: 26px;
+
+  border: 0;
+
+  border-radius: 5px;
+
+  color: #718077;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.management-account-button:hover {
+  background: #f0f3ee;
+}
+
+
+/* =========================
+   MANAGEMENT CONTENT
+========================= */
+
+.management-content {
+  flex: 1;
+}
+
+
+/* =========================
+   TABLET / SMALL DESKTOP
+========================= */
+
+@media (max-width: 1050px) {
+
+  .management-sidebar {
+    flex-basis: 218px;
+  }
+
+  .management-topbar {
+    padding: 0 22px;
+  }
+
+  .management-module-nav {
+    gap: 18px;
+  }
+
+  .module-link {
+    gap: 6px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .management-sidebar {
+    flex-basis: 72px;
+
+    padding-top: 20px;
+  }
+
+  .management-brand {
+    justify-content: center;
+
+    padding: 0 8px 26px;
+  }
+
+  .management-brand > span:last-child,
+  .management-sidebar-footer {
+    display: none;
+  }
+
+  .management-nav {
+    padding: 0 9px;
+  }
+
+  .management-nav-item {
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0;
+  }
+
+  .management-nav-label {
+    display: none;
+  }
+
+  .management-topbar {
+    min-height: 62px;
+
+    padding: 0 17px;
+  }
+
+  .management-module-nav {
+    gap: 15px;
+  }
+
+  .module-link {
+    gap: 0;
+
+    font-size: 0;
+  }
+
+  .module-arrow {
+    display: none;
+  }
+
+  .management-account-info,
+  .management-account-button {
+    display: none;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 520px) {
+
+  .management-topbar {
+    padding: 0 12px;
+  }
+
+  .management-module-nav {
+    gap: 12px;
+  }
+}

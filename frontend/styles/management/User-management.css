@@ -1,0 +1,782 @@
+.user-management-page {
+  width: min(100%, 1420px);
+  margin: 0 auto;
+  padding: 34px clamp(22px, 3.6vw, 52px) 48px;
+  color: var(--green-dark);
+}
+
+.user-management-theme .user-management-page {
+  color: var(--management-page-heading);
+}
+
+.user-management-theme .user-management-eyebrow,
+.user-management-theme .user-management-heading > div > p:last-child {
+  color: var(--management-page-muted);
+}
+
+.user-management-theme .user-management-heading h1 {
+  color: var(--management-page-heading);
+}
+
+.user-management-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 27px;
+}
+
+.user-management-eyebrow {
+  margin: 0 0 7px;
+  color: var(--text-light);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.user-management-heading h1,
+.user-management-modal-heading h2 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.user-management-heading > div > p:last-child {
+  margin: 7px 0 0;
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+.user-management-add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  color: var(--white);
+  background: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.user-management-add-button:hover:not(:disabled) {
+  border-color: var(--green-dark);
+  background: var(--green-dark);
+}
+
+.user-management-add-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.user-management-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 21px;
+}
+
+.user-management-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 91px;
+  padding: 17px 19px;
+  border: 1px solid #e5e9e2;
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.user-management-theme .user-management-stat-card {
+  border-color: var(--management-stat-border);
+  background: var(--management-stat-bg);
+  box-shadow: 0 4px 16px rgba(0, 35, 23, 0.12);
+}
+
+.user-management-stat-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 6px;
+}
+
+.user-management-stat-icon.total {
+  color: #397552;
+  background: #e9f2e8;
+}
+
+.user-management-stat-icon.active {
+  color: #568339;
+  background: #eff5df;
+}
+
+.user-management-stat-icon.inactive {
+  color: #a76532;
+  background: #f8eee3;
+}
+
+.user-management-stat-card > div {
+  display: grid;
+  gap: 5px;
+}
+
+.user-management-stat-card > div > span {
+  color: var(--text-light);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.user-management-theme .user-management-stat-card > div > span {
+  color: var(--management-page-muted);
+}
+
+.user-management-stat-card strong {
+  color: var(--green-dark);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.user-management-theme .user-management-stat-card strong {
+  color: var(--management-stat-text);
+}
+
+
+/* =========================
+   USER LIST
+========================= */
+
+.user-management-list {
+  overflow: visible;
+  border: 1px solid #e5e9e2;
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.user-management-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #edf0eb;
+}
+
+.user-management-search,
+.user-management-filter {
+  display: flex;
+  align-items: center;
+  min-height: 39px;
+  border: 1px solid #e1e6df;
+  border-radius: 4px;
+  background: var(--white);
+}
+
+.user-management-search {
+  flex: 1 1 280px;
+  gap: 9px;
+  padding: 0 11px;
+  color: #87938a;
+}
+
+.user-management-search:focus-within,
+.user-management-filter:focus-within {
+  border-color: #78a18a;
+  box-shadow: 0 0 0 3px rgba(39, 99, 75, 0.08);
+}
+
+.user-management-search input,
+.user-management-filter select {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #34463c;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+}
+
+.user-management-search input::placeholder {
+  color: #9aa49d;
+}
+
+.user-management-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.user-management-filter {
+  flex: 0 0 145px;
+  padding: 0 10px;
+}
+
+.user-management-filter select {
+  cursor: pointer;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+
+
+.user-management-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.user-management-table th {
+  height: 43px;
+  padding: 0 19px;
+  color: #7c8980;
+  background: #fafbf9;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+
+.user-management-table th:last-child,
+.user-management-table td:last-child {
+  width: 64px;
+  padding-right: 13px;
+  text-align: center;
+}
+
+.user-management-table td {
+  height: 59px;
+  padding: 0 19px;
+  border-top: 1px solid #edf0eb;
+  color: #34463c;
+  font-size: 11px;
+}
+
+
+/* =========================
+   USER IDENTITY
+========================= */
+
+.user-management-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-management-identity strong {
+  color: #263a30;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.user-management-avatar {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #397552;
+  background: #e9f2e8;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.user-management-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #53705f;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.user-management-role.role-admin {
+  color: #62783b;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.user-management-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.user-management-status > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.user-management-status.is-active {
+  color: #4c7c39;
+}
+
+.user-management-status.is-active > span {
+  background: #75a84e;
+}
+
+.user-management-status.is-inactive {
+  color: #88918b;
+}
+
+.user-management-status.is-inactive > span {
+  border: 1.5px solid #9da69f;
+}
+
+
+/* =========================
+   LAST ACTIVE
+========================= */
+
+.user-management-last-active {
+  color: #52645a;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.user-management-last-active.is-never {
+  color: #9aa49d;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.user-management-actions-cell {
+  position: relative;
+}
+
+.user-management-actions {
+  position: relative;
+  display: inline-block;
+}
+
+.user-management-actions summary {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  color: var(--text-light);
+  list-style: none;
+  cursor: pointer;
+}
+
+.user-management-actions summary::-webkit-details-marker {
+  display: none;
+}
+
+.user-management-actions summary:hover,
+.user-management-actions[open] summary {
+  color: var(--green);
+  background: var(--green-soft);
+}
+
+.user-management-actions:not([open]) > .user-management-actions-menu {
+  display: none;
+}
+
+.user-management-actions-menu {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 3px);
+  right: 0;
+  min-width: 145px;
+  padding: 4px;
+  border: 1px solid #e5e9e2;
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 0 8px 22px rgba(32, 53, 45, 0.12);
+}
+
+.user-management-actions-menu button {
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 3px;
+  color: #34463c;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.user-management-actions-menu button:hover:not(:disabled) {
+  background: var(--green-soft);
+}
+
+.user-management-actions-menu button:disabled {
+  color: #9aa49d;
+  cursor: wait;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.user-management-empty {
+  height: 92px !important;
+  color: #87938a !important;
+  text-align: center;
+}
+
+
+/* =========================
+   TABLE FOOTER
+========================= */
+
+.user-management-table-footer {
+  padding: 12px 18px;
+  border-top: 1px solid #edf0eb;
+  color: #87938a;
+  font-size: 10px;
+}
+
+.user-management-table-footer strong {
+  color: #506359;
+  font-weight: 700;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.user-management-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0d8cf;
+  color: #9b4d3e;
+  background: #fff7f4;
+  font-size: 11px;
+}
+
+.user-management-error button {
+  flex: 0 0 auto;
+  border: 0;
+  color: var(--green);
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.user-management-modal-backdrop {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(21, 38, 29, 0.42);
+}
+
+.user-management-modal {
+  width: min(100%, 430px);
+  padding: 25px;
+  border: 1px solid #e5e9e2;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 20px 60px rgba(20, 38, 28, 0.2);
+}
+
+.user-management-modal-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.user-management-modal-heading h2 {
+  font-size: 21px;
+}
+
+.user-management-close-button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 4px;
+  color: #718077;
+  background: transparent;
+  cursor: pointer;
+}
+
+.user-management-close-button:hover {
+  background: var(--green-soft);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.user-management-field {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 15px;
+  color: #52645a;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.user-management-field input,
+.user-management-field select {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 11px;
+  border: 1px solid #e1e6df;
+  border-radius: 4px;
+  outline: 0;
+  color: #34463c;
+  background: var(--white);
+  font: inherit;
+  font-size: 11px;
+}
+
+.user-management-field input:focus,
+.user-management-field select:focus {
+  border-color: #78a18a;
+  box-shadow: 0 0 0 3px rgba(39, 99, 75, 0.08);
+}
+
+.user-management-form-error {
+  margin: 0 0 14px;
+  color: #a44737;
+  font-size: 11px;
+}
+
+.user-management-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.user-management-cancel-button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #dfe5dd;
+  border-radius: 5px;
+  color: #637168;
+  background: var(--white);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.user-management-cancel-button:hover {
+  background: #f7f8f6;
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 760px) {
+  .user-management-page {
+    padding: 27px 19px 34px;
+  }
+
+  .user-management-stats {
+    gap: 9px;
+  }
+
+  .user-management-stat-card {
+    gap: 9px;
+    min-height: 79px;
+    padding: 12px;
+  }
+
+  .user-management-stat-icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .user-management-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .user-management-search {
+    flex-basis: 100%;
+  }
+
+  .user-management-filter {
+    flex: 1 1 120px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .user-management-page {
+    padding: 22px 14px 28px;
+  }
+
+  .user-management-heading {
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .user-management-heading h1 {
+    font-size: 21px;
+  }
+
+  .user-management-heading > div > p:last-child {
+    max-width: 205px;
+    line-height: 1.5;
+  }
+
+  .user-management-add-button {
+    min-height: 37px;
+    gap: 5px;
+    padding: 0 10px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .user-management-stats {
+    gap: 7px;
+  }
+
+  .user-management-stat-card {
+    display: grid;
+    justify-items: start;
+    gap: 9px;
+    min-height: 105px;
+    padding: 11px;
+  }
+
+  .user-management-stat-card strong {
+    font-size: 18px;
+  }
+
+  .user-management-table th,
+  .user-management-table td {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .user-management-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .user-management-table th:first-child,
+  .user-management-table td:first-child {
+    width: 36%;
+  }
+
+  .user-management-table th:nth-child(2),
+  .user-management-table td:nth-child(2) {
+    width: 24%;
+  }
+
+  .user-management-table th:nth-child(3),
+  .user-management-table td:nth-child(3) {
+    width: 19%;
+    white-space: nowrap;
+  }
+
+  .user-management-table th:nth-child(4),
+  .user-management-table td:nth-child(4) {
+    width: 26%;
+  }
+
+  .user-management-table th:last-child,
+  .user-management-table td:last-child {
+    width: 40px;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  .user-management-avatar,
+  .user-management-role svg {
+    display: none;
+  }
+
+  .user-management-role {
+    font-size: 9px;
+  }
+
+  .user-management-last-active {
+    font-size: 8px;
+    white-space: normal;
+  }
+
+  .user-management-identity strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .user-management-modal {
+    padding: 21px;
+  }
+}

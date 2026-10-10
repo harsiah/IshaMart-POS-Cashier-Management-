@@ -1,0 +1,60 @@
+:root {
+  /* =========================
+     FONT
+  ========================= */
+
+  --font-main: "DM Sans", sans-serif;
+  --font-display: "Pacifico", cursive;
+
+
+  /* =========================
+     ISHAMART GREEN PALETTE
+  ========================= */
+
+  --green-dark: #173c30;
+  --green: #27634b;
+  --green-main: #247a5b;
+
+  --green-light: #dcebdc;
+  --green-soft: #edf5ed;
+
+
+  /* =========================
+     BACKGROUND
+  ========================= */
+
+  --cream: #f5f8f2;
+  --page-bg: #f3f7f1;
+  --management-page-bg: linear-gradient(115deg, #063d2b 0%, #25844e 52%, #06462f 100%);
+  --management-page-heading: #f4faef;
+  --management-page-muted: #c4dec9;
+  --management-stat-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.07));
+  --management-stat-border: rgba(218, 243, 220, 0.2);
+  --management-stat-text: #f4faef;
+  --white: #ffffff;
+
+
+  /* =========================
+     TEXT
+  ========================= */
+
+  --text-dark: #173c30;
+  --text: #526b60;
+  --text-light: #82958b;
+
+
+  /* =========================
+     BORDER
+  ========================= */
+
+  --border: #dce8df;
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  --header-green: #173c30;
+  --header-green-light: #dcebdc;
+  --accent-lime: #d7ed82;
+}
